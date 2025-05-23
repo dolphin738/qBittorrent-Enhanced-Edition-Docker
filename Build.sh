@@ -74,7 +74,7 @@ docker run -d \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v ${WORKDIR}:/build \
     --workdir /build \
-    dockerhub.ddsrem.in:998/catthehacker/ubuntu@sha256:3ad2f8684955514d9ddf942efc9078f3cb02ffe5ebbb6a5af655a783ffe3062f tail -f /dev/null
+    docker pull catthehacker/ubuntu:act-latest tail -f /dev/null
 docker exec -it ${Builder_Name} uname -a
 docker exec -it ${Builder_Name} mkdir -p ${HOME}/.docker/cli-plugins
 docker exec -it ${Builder_Name} curl -sL https://github.com/christian-korneck/docker-pushrm/releases/download/v1.9.0/docker-pushrm_linux_amd64 -o ${HOME}/.docker/cli-plugins/docker-pushrm
